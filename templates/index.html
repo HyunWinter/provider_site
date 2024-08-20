@@ -1,139 +1,83 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <!-- Header -->
-    <header class="bg-[#385444] border-b shadow-sm">
-        <div class="container mx-auto flex justify-between items-center px-10 p-4">
-            <div class="text-xl font-bold text-white">Riaz Counseling</div>
-            <div class="flex items-center space-x-6">
-                <nav class="hidden md:flex space-x-4">
-                    <a href="#" class="text-gray-100 hover:text-green-100">How It Works</a>
-                    <a href="#" class="text-gray-100 hover:text-green-100">For Providers</a>
-                    <a href="#" class="text-gray-100 hover:text-green-100">About Alma</a>
-                    <a href="#" class="text-gray-100 hover:text-green-100">Blog</a>
-                </nav>
-                <div class="flex space-x-4">
-                    <button class="px-4 py-2 border border-gray-100 text-white rounded">Find a Therapist</button>
-                </div>
+<!-- Header -->
+<header class="bg-[#385444] border-b shadow-sm">
+    <div class="container mx-auto flex justify-between items-center px-4 py-4">
+        <div class="text-xl font-bold text-white">Riaz Counseling</div>
+        <div class="flex items-center space-x-4">
+            <nav class="hidden md:flex space-x-4">
+                <a href="#" class="text-gray-100 hover:text-green-100">How It Works</a>
+                <a href="#" class="text-gray-100 hover:text-green-100">For Providers</a>
+                <a href="#" class="text-gray-100 hover:text-green-100">About Alma</a>
+                <a href="#" class="text-gray-100 hover:text-green-100">Blog</a>
+            </nav>
+            <div class="flex space-x-4">
+                <button class="px-4 py-2 border border-gray-100 text-white rounded">Find a Therapist</button>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
-   <!-- Main Section -->
-   <main class="container mx-auto text-center py-16 px-10">
-    <h1 class="text-7xl text-gray-800 mb-8 p-7">Therapists Serving Houston, Sugar Land, The Woodlands, and Texas</h1>
+<!-- Main Section -->
+<main class="container mx-auto text-center py-16 px-4 md:px-10">
+    <h1 class="text-4xl md:text-7xl text-gray-800 mb-8 p-4">Therapists Serving Houston, Sugar Land, The Woodlands, and Texas</h1>
 
-    <div class="bg-[#385444] text-white py-10 px-10 mt-[150px]">
-        <div class="max-w-4xl mx-auto flex flex-col items-center gap-9"> <!-- Updated classes here -->
-            <div class="text-center"> <!-- Ensure this is centered -->
+    <div class="bg-[#385444] text-white py-10 px-4 md:px-10 mt-10 md:mt-[150px]">
+        <div class="max-w-4xl mx-auto flex flex-col items-center gap-9">
+            <div class="text-center">
                 <a href="#" class="inline-block bg-transparent border-2 border-white text-white py-2 px-4 rounded hover:bg-white hover:text-green-700 transition duration-300">
-                  Contact Us
+                    Contact Us
                 </a>
             </div>
         </div>
     </div>
 
     <!-- Tabs -->
-    <div class="bg-white shadow-md rounded-md px-10 py-6 mb-8 inline-block">
-        <div class="flex justify-center space-x-8 mb-4">
-            <button id="tab1-btn"
-                class="tab-btn text-green-900 border-b-4 border-green-700 pb-2 focus:outline-none">Help me find
-                care</button>
-            <button id="tab2-btn"
-                class="tab-btn text-gray-600 hover:text-green-900 focus:outline-none">Browse the directory</button>
+    <div class="bg-white shadow-md rounded-md px-4 md:px-10 py-6 mb-8">
+        <div class="flex justify-center space-x-4 md:space-x-8 mb-4">
+            <button id="tab1-btn" class="tab-btn text-green-900 border-b-4 border-green-700 pb-2 focus:outline-none">Help me find care</button>
+            <button id="tab2-btn" class="tab-btn text-gray-600 hover:text-green-900 focus:outline-none">Browse the directory</button>
         </div>
 
         <!-- Cards -->
         <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <!-- Tab 1 Content -->
             <div class="tab-content-1 p-4 bg-white border rounded-md shadow-sm hover:shadow-lg transition">
-                <svg class="w-10 h-10 mx-auto mb-4 text-green-900" fill="none" stroke="currentColor"
-                    stroke-width="2" viewBox="0 0 24 24">
+                <svg class="w-10 h-10 mx-auto mb-4 text-green-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <!-- SVG for Individual Therapy -->
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M12 11c1.654 0 3-1.346 3-3s-1.346-3-3-3-3 1.346-3 3 1.346 3 3 3zm0 2c-1.326 0-2.598.534-3.535 1.465A5.004 5.004 0 007 17h10a5.004 5.004 0 00-1.465-3.535A4.975 4.975 0 0012 13z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c1.654 0 3-1.346 3-3s-1.346-3-3-3-3 1.346-3 3 1.346 3 3 3zm0 2c-1.326 0-2.598.534-3.535 1.465A5.004 5.004 0 007 17h10a5.004 5.004 0 00-1.465-3.535A4.975 4.975 0 0012 13z" />
                 </svg>
                 <p class="text-gray-800 font-semibold">Individual therapy</p>
-                <p class="text-gray-800 ">Individual therapy is a joint process between you and the therapist. Individual therapy is commonly referred to as psychotherapy, psychosocial therapy, talk therapy, or counseling.</p>
+                <p class="text-gray-800">Individual therapy is a joint process between you and the therapist. Individual therapy is commonly referred to as psychotherapy, psychosocial therapy, talk therapy, or counseling.</p>
             </div>
             <div class="tab-content-1 p-4 bg-white border rounded-md shadow-sm hover:shadow-lg transition">
-                <svg class="w-10 h-10 mx-auto mb-4 text-green-900" fill="none" stroke="currentColor"
-                    stroke-width="2" viewBox="0 0 24 24">
+                <svg class="w-10 h-10 mx-auto mb-4 text-green-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <!-- SVG for Couples Therapy -->
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M17 20h5V10H2v10h5m5-12h4l3 3v9H7V7l3-3h4zM7 20v-4h10v4H7z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5V10H2v10h5m5-12h4l3 3v9H7V7l3-3h4zM7 20v-4h10v4H7z" />
                 </svg>
                 <p class="text-gray-800 font-semibold">Couples therapy</p>
-                <p class="text-gray-800 ">Are you worried about your relationship and don’t know where to turn? Relationships can be tough for everyone. We have couples therapists that are here to help.</p>
+                <p class="text-gray-800">Are you worried about your relationship and don’t know where to turn? Relationships can be tough for everyone. We have couples therapists that are here to help.</p>
             </div>
             <div class="tab-content-1 p-4 bg-white border rounded-md shadow-sm hover:shadow-lg transition">
-                <svg class="w-10 h-10 mx-auto mb-4 text-green-900" fill="none" stroke="currentColor"
-                    stroke-width="2" viewBox="0 0 24 24">
+                <svg class="w-10 h-10 mx-auto mb-4 text-green-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <!-- SVG for Medication Management -->
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M19 9l-7 7-7-7m12-2h5v12H5V7h5m12 0L9 17m0 0l-7-7 7-7M9 17v-4m0 0H5v4h4v-4z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7m12-2h5v12H5V7h5m12 0L9 17m0 0l-7-7 7-7M9 17v-4m0 0H5v4h4v-4z" />
                 </svg>
                 <p class="text-gray-800 font-semibold">Medication management</p>
-                <p class="text-gray-800 ">Family therapy is a type of psychological counseling (psychotherapy) that can help family members improve communication and resolve conflicts.This therapy is usually with 3 or more family members in one sitting.</p>
-
+                <p class="text-gray-800">Family therapy is a type of psychological counseling (psychotherapy) that can help family members improve communication and resolve conflicts. This therapy is usually with 3 or more family members in one sitting.</p>
             </div>
-
-        </div>
-        <!-- Tab 2 Content (hidden by default) -->
-        <div class="tab-content-2 p-4 bg-white border rounded-md shadow-sm hover:shadow-lg transition hidden">
-            <form >
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-
-                    <!-- Service Type -->
-                    <div>
-                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500">
-                            <option disabled selected>What type of service?</option>
-                            <!-- Add options here -->
-                        </select>
-                    </div>
-                    
-                    <!-- Insurance -->
-                    <div>
-                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500">
-                            <option disabled selected>Which Insurance?</option>
-                            <!-- Add options here -->
-                        </select>
-                    </div>
-                    
-                    <!-- City or ZIP -->
-                    <div>
-                        <input type="text" placeholder="Your city or ZIP *" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500" />
-                    </div>
-                    
-                    <!-- Virtual or In-person -->
-                    <div>
-                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500">
-                            <option disabled selected>Virtual or in-person?</option>
-                            <!-- Add options here -->
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Submit Button -->
-                <div class="text-center w-25 mt-8">
-                    <button type="submit" class="w-[180px] bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 focus:outline-none">
-                        Explore Providers →
-                    </button>
-                </div>
-            </form>
         </div>
     </div>
 </main>
 
 <!-- JavaScript for Tabs -->
 <script>
-    // Get elements
     const tab1Btn = document.getElementById('tab1-btn');
     const tab2Btn = document.getElementById('tab2-btn');
     const tabContent1 = document.querySelectorAll('.tab-content-1');
     const tabContent2 = document.querySelectorAll('.tab-content-2');
 
-    // Tab switch function
     function switchTab(tab) {
         if (tab === 'tab1') {
             tab1Btn.classList.add('text-green-900', 'border-green-700', 'border-b-4', 'pb-2');
@@ -148,231 +92,113 @@
         }
     }
 
-    // Event listeners
     tab1Btn.addEventListener('click', () => switchTab('tab1'));
     tab2Btn.addEventListener('click', () => switchTab('tab2'));
 </script>
 
-    <div class='container mx-auto px-12'>
+<div class='container mx-auto px-4 md:px-12'>
 
-        <!-- Insurance Section -->
-        <div class="bg-gray-100 p-4 rounded-lg flex justify-between items-center px-10 py-8 mb-8 border bg-white">
-            <div class="flex items-center space-x-4 ">
-                <img src="https://secure.helloalma.com/static/bundles/media/cost-estimate.ae23a2bc.png" alt="Icon" class="h-13 w-10">
-                <p class="text-gray-600 text-lg"> We accept insurances including Ambetter, Aetna, Aana, BCBS, Cigna, and more. </p>
-            </div>
-            <a href="#" class="text-teal-600 text-sm font-semibold hover:underline">See your cost estimate &rarr;</a>
+    <!-- Insurance Section -->
+    <div class="bg-gray-100 p-4 rounded-lg flex justify-between items-center px-4 md:px-10 py-8 mb-8 border bg-white">
+        <div class="flex items-center space-x-4 ">
+            <img src="https://secure.helloalma.com/static/bundles/media/cost-estimate.ae23a2bc.png" alt="Icon" class="h-13 w-10">
+            <p class="text-gray-600 text-lg"> We accept insurances including Ambetter, Aetna, Aana, BCBS, Cigna, and more. </p>
         </div>
-        <!-- Container -->
-    </div> 
-
+        <a href="#" class="text-teal-600 text-sm font-semibold hover:underline">See your cost estimate &rarr;</a>
+    </div>
+</div>
 
 <div class="bg-[#1e4d32]">
-    <div class='container mx-auto px-12'>
-    <div class="relative w-full overflow-hidden px-10 py-12" >
+    <div class='container mx-auto px-4 md:px-12'>
+        <div class="relative w-full overflow-hidden px-4 md:px-10 py-12">
 
-        <div class="flex justify-between items-center mb-4">
-            <h2 class="text-5xl text-white">Our Therapists</h2>
-            <p class="p-3 ml-8 text-white">A passionate group of professionals at Riaz Counseling, united in our commitment to your well-being. Discover the expertise and dedication that sets our team apart.</p>
+            <div class="flex flex-col md:flex-row justify-between items-center mb-4">
+                <h2 class="text-3xl md:text-5xl text-white">Our Therapists</h2>
+                <p class="p-3 text-white text-center md:text-left">A passionate group of professionals at Riaz Counseling, united in our commitment to your well-being. Discover the expertise and dedication that sets our team apart.</p>
+            </div>
+
+            <div class="flex justify-between items-center mb-4 mt-10">
+                <h2 class="text-2xl font-semibold text-white">Offering Teletherapy</h2>
+                <a href="#" class="text-gray-100 text-sm font-semibold hover:underline">Explore &rarr;</a>
+            </div>
+
+            <div id="slider" class="flex transition-transform duration-500 ease-in-out">
+                <!-- Cards -->
+                <!-- Repeat this structure for each therapist card, using responsive width classes -->
+                <div class="flex-shrink-0 w-1/2 sm:w-1/3 md:w-1/6 p-4">
+                    <div class="text-center">
+                        <img src="https://via.placeholder.com/150" alt="Therapist Image" class="w-full rounded-md shadow">
+                        <h3 class="mt-2 text-lg font-medium text-gray-100">Therapist Name</h3>
+                        <p class="text-gray-100">Specialization</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left Arrow -->
+            <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-200 focus:outline-none">
+                <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+
+            <!-- Right Arrow -->
+            <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-200 focus:outline-none">
+                <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
         </div>
-    
 
-    <div class="flex justify-between items-center mb-4 mt-[100px]">
-        <h2 class="text-2xl font-semibold text-white">Offering Teletherapy</h2>
-        <a href="#" class="text-gray-100 text-sm font-semibold hover:underline">Explore &rarr;</a>
+        <!-- Additional Slider Section -->
+
+        <div class="relative w-full overflow-hidden py-8 px-4 md:px-10">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-semibold text-white">Focus on Eating Disorders</h2>
+                <a href="#" class="text-gray-100 text-sm font-semibold hover:underline">Explore &rarr;</a>
+            </div>
+            <div id="slider2" class="flex transition-transform duration-500 ease-in-out">
+                <!-- Repeat this structure for each card, using responsive width classes -->
+                <div class="flex-shrink-0 w-1/2 sm:w-1/3 md:w-1/6 p-4">
+                    <div class="text-center">
+                        <img src="https://via.placeholder.com/150" alt="Therapist Image" class="w-full rounded-md shadow">
+                        <h3 class="mt-2 text-lg font-medium text-gray-100">Therapist Name</h3>
+                        <p class="text-gray-100">Specialization</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left Arrow -->
+            <button id="prev2" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-200 focus:outline-none">
+                <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+
+            <!-- Right Arrow -->
+            <button id="next2" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-200 focus:outline-none">
+                <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+
     </div>
-
-    <div id="slider" class="flex transition-transform duration-500 ease-in-out">
-        <!-- Card 1 -->
-        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
-            <div class="text-center">
-                <img src="https://via.placeholder.com/150" alt="Ann Marie Buchanan-Cummings" class="w-full rounded-md shadow">
-                <h3 class="mt-2 text-lg font-medium text-gray-100">Ann Marie Buchanan-Cummings</h3>
-                <p class="text-gray-100">Medication Management, NP</p>
-            </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
-            <div class="text-center">
-                <img src="https://via.placeholder.com/150" alt="Jung Mi Yi" class="w-full rounded-md shadow">
-                <h3 class="mt-2 text-lg font-medium text-gray-100">Jung Mi Yi</h3>
-                <p class="text-gray-100">Psychotherapy, Licensed Psychologist</p>
-            </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
-            <div class="text-center">
-                <img src="https://via.placeholder.com/150" alt="Donna Felkins-Dohm" class="w-full rounded-md shadow">
-                <h3 class="mt-2 text-lg font-medium text-gray-100">Donna Felkins-Dohm</h3>
-                <p class="text-gray-100">Medication Management, NP</p>
-            </div>
-        </div>
-        <!-- Card 4 -->
-        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
-            <div class="text-center">
-                <img src="https://via.placeholder.com/150" alt="Melody Midoneck" class="w-full rounded-md shadow">
-                <h3 class="mt-2 text-lg font-medium text-gray-100">Melody Midoneck</h3>
-                <p class="text-gray-100">Psychotherapy, LCSW</p>
-            </div>
-        </div>
-        <!-- Card 5 -->
-        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
-            <div class="text-center">
-                <img src="https://via.placeholder.com/150" alt="Kübra Aydin" class="w-full rounded-md shadow">
-                <h3 class="mt-2 text-lg font-medium text-gray-100">Kübra Aydin</h3>
-                <p class="text-gray-100">Psychotherapy, LMHC</p>
-            </div>
-        </div>
-        <!-- Card 6 -->
-        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
-            <div class="text-center">
-                <img src="https://via.placeholder.com/150" alt="Ellie Pinnock" class="w-full rounded-md shadow">
-                <h3 class="mt-2 text-lg font-medium text-gray-100">Ellie Pinnock</h3>
-                <p class="text-gray-100">Psychotherapy, LPC</p>
-            </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
-            <div class="text-center">
-                <img src="https://via.placeholder.com/150" alt="Ellie Pinnock" class="w-full rounded-md shadow">
-                <h3 class="mt-2 text-lg font-medium text-gray-100">Ellie Pinnock</h3>
-                <p class="text-gray-100">Psychotherapy, LPC</p>
-            </div>
-        </div>
-        <!-- Card 6 -->
-        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
-            <div class="text-center">
-                <img src="https://via.placeholder.com/150" alt="Ellie Pinnock" class="w-full rounded-md shadow">
-                <h3 class="mt-2 text-lg font-medium text-gray-100">Ellie Pinnock</h3>
-                <p class="text-gray-100">Psychotherapy, LPC</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Left Arrow -->
-    <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-200 focus:outline-none">
-        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-        </svg>
-    </button>
-
-    <!-- Right Arrow -->
-    <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-200 focus:outline-none">
-        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-        </svg>
-    </button>
 </div>
 
-
-<div class="relative w-full overflow-hidden py-8 px-10">
-    <div class="flex justify-between items-center mb-4">
-        <h2 class="text-2xl font-semibold text-white">Focus on Eating Disorders</h2>
-        <a href="#" class="text-gray-100 text-sm font-semibold hover:underline">Explore &rarr;</a>
-    </div>
-    <div id="slider2" class="flex transition-transform duration-500 ease-in-out">
-        <!-- Card 1 -->
-        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
-            <div class="text-center">
-                <img src="https://via.placeholder.com/150" alt="Ann Marie Buchanan-Cummings" class="w-full rounded-md shadow">
-                <h3 class="mt-2 text-lg font-medium text-gray-100">Ann Marie Buchanan-Cummings</h3>
-                <p class="text-gray-100">Medication Management, NP</p>
-            </div>
+<div class="bg-[#1e4d32] text-white py-16 px-4 md:px-10">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-9">
+        <div>
+            <h1 class="text-4xl font-semibold mb-4">How does Alma work?</h1>
         </div>
-        <!-- Card 2 -->
-        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
-            <div class="text-center">
-                <img src="https://via.placeholder.com/150" alt="Jung Mi Yi" class="w-full rounded-md shadow">
-                <h3 class="mt-2 text-lg font-medium text-gray-100">Jung Mi Yi</h3>
-                <p class="text-gray-100">Psychotherapy, Licensed Psychologist</p>
-            </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
-            <div class="text-center">
-                <img src="https://via.placeholder.com/150" alt="Donna Felkins-Dohm" class="w-full rounded-md shadow">
-                <h3 class="mt-2 text-lg font-medium text-gray-100">Donna Felkins-Dohm</h3>
-                <p class="text-gray-100">Medication Management, NP</p>
-            </div>
-        </div>
-        <!-- Card 4 -->
-        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
-            <div class="text-center">
-                <img src="https://via.placeholder.com/150" alt="Melody Midoneck" class="w-full rounded-md shadow">
-                <h3 class="mt-2 text-lg font-medium text-gray-100">Melody Midoneck</h3>
-                <p class="text-gray-100">Psychotherapy, LCSW</p>
-            </div>
-        </div>
-        <!-- Card 5 -->
-        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
-            <div class="text-center">
-                <img src="https://via.placeholder.com/150" alt="Kübra Aydin" class="w-full rounded-md shadow">
-                <h3 class="mt-2 text-lg font-medium text-gray-100">Kübra Aydin</h3>
-                <p class="text-gray-100">Psychotherapy, LMHC</p>
-            </div>
-        </div>
-        <!-- Card 6 -->
-        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
-            <div class="text-center">
-                <img src="https://via.placeholder.com/150" alt="Ellie Pinnock" class="w-full rounded-md shadow">
-                <h3 class="mt-2 text-lg font-medium text-gray-100">Ellie Pinnock</h3>
-                <p class="text-gray-100">Psychotherapy, LPC</p>
-            </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
-            <div class="text-center">
-                <img src="https://via.placeholder.com/150" alt="Ellie Pinnock" class="w-full rounded-md shadow">
-                <h3 class="mt-2 text-lg font-medium text-gray-100">Ellie Pinnock</h3>
-                <p class="text-gray-100">Psychotherapy, LPC</p>
-            </div>
-        </div>
-        <!-- Card 6 -->
-        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
-            <div class="text-center">
-                <img src="https://via.placeholder.com/150" alt="Ellie Pinnock" class="w-full rounded-md shadow">
-                <h3 class="mt-2 text-lg font-medium text-gray-100">Ellie Pinnock</h3>
-                <p class="text-gray-100">Psychotherapy, LPC</p>
-            </div>
+        <div>
+            <p class="mb-4">Alma is a community of independent mental health care providers. While our team helps you navigate the search process, we don’t prescribe the rest.</p>
+            <p class="mb-8">Each provider at Alma sets their own rates and makes their own decisions about going in-network with major insurance payers.</p>
+            <a href="#" class="inline-block bg-transparent border-2 border-white text-white py-2 px-4 rounded hover:bg-white hover:text-green-700 transition duration-300">
+                Learn more about Alma
+            </a>
         </div>
     </div>
-
-    <!-- Left Arrow -->
-    <button id="prev2" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-200 focus:outline-none">
-        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-        </svg>
-    </button>
-
-    <!-- Right Arrow -->
-    <button id="next2" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-200 focus:outline-none">
-        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-        </svg>
-    </button>
 </div>
-
-</div>
-</div>
-
-    <div class="bg-[#1e4d32] text-white py-16 px-10">
-        <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-9">
-            <div>
-
-                <h1 class="text-4xl font-semibold mb-4">How does Alma work?</h1>
-            </div>
-            <div>
-
-                <p class="mb-4">Alma is a community of independent mental health care providers. While our team helps you navigate the search process, we don’t prescribe the rest.</p>
-                <p class="mb-8">Each provider at Alma sets their own rates and makes their own decisions about going in-network with major insurance payers.</p>
-                <a href="#" class="inline-block bg-transparent border-2 border-white text-white py-2 px-4 rounded hover:bg-white hover:text-green-700 transition duration-300">
-                  Learn more about Alma
-                </a>
-            </div>
-        </div>
-      </div>
       <footer class="bg-[#385444]  text-white py-16 px-14">
         <div class=" mx-auto px-4 sm:px-6 lg:px-8">
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
