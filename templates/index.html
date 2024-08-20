@@ -1,0 +1,756 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <!-- Header -->
+    <header class="bg-[#385444] border-b shadow-sm">
+        <div class="container mx-auto flex justify-between items-center px-10 p-4">
+            <div class="text-xl font-bold text-white">Riaz Counseling</div>
+            <div class="flex items-center space-x-6">
+                <nav class="hidden md:flex space-x-4">
+                    <a href="#" class="text-gray-100 hover:text-green-100">How It Works</a>
+                    <a href="#" class="text-gray-100 hover:text-green-100">For Providers</a>
+                    <a href="#" class="text-gray-100 hover:text-green-100">About Alma</a>
+                    <a href="#" class="text-gray-100 hover:text-green-100">Blog</a>
+                </nav>
+                <div class="flex space-x-4">
+                    <button class="px-4 py-2 border border-gray-100 text-white rounded">Find a Therapist</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+   <!-- Main Section -->
+   <main class="container mx-auto text-center py-16 px-10">
+    <h1 class="text-7xl text-gray-800 mb-8 p-7">Therapists Serving Houston, Sugar Land, The Woodlands, and Texas</h1>
+
+    <div class="bg-[#385444] text-white py-10 px-10 mt-[150px]">
+        <div class="max-w-4xl mx-auto flex flex-col items-center gap-9"> <!-- Updated classes here -->
+            <div class="text-center"> <!-- Ensure this is centered -->
+                <a href="#" class="inline-block bg-transparent border-2 border-white text-white py-2 px-4 rounded hover:bg-white hover:text-green-700 transition duration-300">
+                  Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="bg-white shadow-md rounded-md px-10 py-6 mb-8 inline-block">
+        <div class="flex justify-center space-x-8 mb-4">
+            <button id="tab1-btn"
+                class="tab-btn text-green-900 border-b-4 border-green-700 pb-2 focus:outline-none">Help me find
+                care</button>
+            <button id="tab2-btn"
+                class="tab-btn text-gray-600 hover:text-green-900 focus:outline-none">Browse the directory</button>
+        </div>
+
+        <!-- Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Tab 1 Content -->
+            <div class="tab-content-1 p-4 bg-white border rounded-md shadow-sm hover:shadow-lg transition">
+                <svg class="w-10 h-10 mx-auto mb-4 text-green-900" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 24 24">
+                    <!-- SVG for Individual Therapy -->
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 11c1.654 0 3-1.346 3-3s-1.346-3-3-3-3 1.346-3 3 1.346 3 3 3zm0 2c-1.326 0-2.598.534-3.535 1.465A5.004 5.004 0 007 17h10a5.004 5.004 0 00-1.465-3.535A4.975 4.975 0 0012 13z" />
+                </svg>
+                <p class="text-gray-800 font-semibold">Individual therapy</p>
+                <p class="text-gray-800 ">Individual therapy is a joint process between you and the therapist. Individual therapy is commonly referred to as psychotherapy, psychosocial therapy, talk therapy, or counseling.</p>
+            </div>
+            <div class="tab-content-1 p-4 bg-white border rounded-md shadow-sm hover:shadow-lg transition">
+                <svg class="w-10 h-10 mx-auto mb-4 text-green-900" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 24 24">
+                    <!-- SVG for Couples Therapy -->
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17 20h5V10H2v10h5m5-12h4l3 3v9H7V7l3-3h4zM7 20v-4h10v4H7z" />
+                </svg>
+                <p class="text-gray-800 font-semibold">Couples therapy</p>
+                <p class="text-gray-800 ">Are you worried about your relationship and don’t know where to turn? Relationships can be tough for everyone. We have couples therapists that are here to help.</p>
+            </div>
+            <div class="tab-content-1 p-4 bg-white border rounded-md shadow-sm hover:shadow-lg transition">
+                <svg class="w-10 h-10 mx-auto mb-4 text-green-900" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 24 24">
+                    <!-- SVG for Medication Management -->
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M19 9l-7 7-7-7m12-2h5v12H5V7h5m12 0L9 17m0 0l-7-7 7-7M9 17v-4m0 0H5v4h4v-4z" />
+                </svg>
+                <p class="text-gray-800 font-semibold">Medication management</p>
+                <p class="text-gray-800 ">Family therapy is a type of psychological counseling (psychotherapy) that can help family members improve communication and resolve conflicts.This therapy is usually with 3 or more family members in one sitting.</p>
+
+            </div>
+
+        </div>
+        <!-- Tab 2 Content (hidden by default) -->
+        <div class="tab-content-2 p-4 bg-white border rounded-md shadow-sm hover:shadow-lg transition hidden">
+            <form >
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+                    <!-- Service Type -->
+                    <div>
+                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500">
+                            <option disabled selected>What type of service?</option>
+                            <!-- Add options here -->
+                        </select>
+                    </div>
+                    
+                    <!-- Insurance -->
+                    <div>
+                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500">
+                            <option disabled selected>Which Insurance?</option>
+                            <!-- Add options here -->
+                        </select>
+                    </div>
+                    
+                    <!-- City or ZIP -->
+                    <div>
+                        <input type="text" placeholder="Your city or ZIP *" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500" />
+                    </div>
+                    
+                    <!-- Virtual or In-person -->
+                    <div>
+                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500">
+                            <option disabled selected>Virtual or in-person?</option>
+                            <!-- Add options here -->
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center w-25 mt-8">
+                    <button type="submit" class="w-[180px] bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 focus:outline-none">
+                        Explore Providers →
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+<!-- JavaScript for Tabs -->
+<script>
+    // Get elements
+    const tab1Btn = document.getElementById('tab1-btn');
+    const tab2Btn = document.getElementById('tab2-btn');
+    const tabContent1 = document.querySelectorAll('.tab-content-1');
+    const tabContent2 = document.querySelectorAll('.tab-content-2');
+
+    // Tab switch function
+    function switchTab(tab) {
+        if (tab === 'tab1') {
+            tab1Btn.classList.add('text-green-900', 'border-green-700', 'border-b-4', 'pb-2');
+            tab2Btn.classList.remove('text-green-900', 'border-green-700', 'border-b-4', 'pb-2');
+            tabContent1.forEach(item => item.classList.remove('hidden'));
+            tabContent2.forEach(item => item.classList.add('hidden'));
+        } else {
+            tab2Btn.classList.add('text-green-900', 'border-green-700', 'border-b-4', 'pb-2');
+            tab1Btn.classList.remove('text-green-900', 'border-green-700', 'border-b-4', 'pb-2');
+            tabContent1.forEach(item => item.classList.add('hidden'));
+            tabContent2.forEach(item => item.classList.remove('hidden'));
+        }
+    }
+
+    // Event listeners
+    tab1Btn.addEventListener('click', () => switchTab('tab1'));
+    tab2Btn.addEventListener('click', () => switchTab('tab2'));
+</script>
+
+    <div class='container mx-auto px-12'>
+
+        <!-- Insurance Section -->
+        <div class="bg-gray-100 p-4 rounded-lg flex justify-between items-center px-10 py-8 mb-8 border bg-white">
+            <div class="flex items-center space-x-4 ">
+                <img src="https://secure.helloalma.com/static/bundles/media/cost-estimate.ae23a2bc.png" alt="Icon" class="h-13 w-10">
+                <p class="text-gray-600 text-lg"> We accept insurances including Ambetter, Aetna, Aana, BCBS, Cigna, and more. </p>
+            </div>
+            <a href="#" class="text-teal-600 text-sm font-semibold hover:underline">See your cost estimate &rarr;</a>
+        </div>
+        <!-- Container -->
+    </div> 
+
+
+<div class="bg-[#1e4d32]">
+    <div class='container mx-auto px-12'>
+    <div class="relative w-full overflow-hidden px-10 py-12" >
+
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-5xl text-white">Our Therapists</h2>
+            <p class="p-3 ml-8 text-white">A passionate group of professionals at Riaz Counseling, united in our commitment to your well-being. Discover the expertise and dedication that sets our team apart.</p>
+        </div>
+    
+
+    <div class="flex justify-between items-center mb-4 mt-[100px]">
+        <h2 class="text-2xl font-semibold text-white">Offering Teletherapy</h2>
+        <a href="#" class="text-gray-100 text-sm font-semibold hover:underline">Explore &rarr;</a>
+    </div>
+
+    <div id="slider" class="flex transition-transform duration-500 ease-in-out">
+        <!-- Card 1 -->
+        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
+            <div class="text-center">
+                <img src="https://via.placeholder.com/150" alt="Ann Marie Buchanan-Cummings" class="w-full rounded-md shadow">
+                <h3 class="mt-2 text-lg font-medium text-gray-100">Ann Marie Buchanan-Cummings</h3>
+                <p class="text-gray-100">Medication Management, NP</p>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
+            <div class="text-center">
+                <img src="https://via.placeholder.com/150" alt="Jung Mi Yi" class="w-full rounded-md shadow">
+                <h3 class="mt-2 text-lg font-medium text-gray-100">Jung Mi Yi</h3>
+                <p class="text-gray-100">Psychotherapy, Licensed Psychologist</p>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
+            <div class="text-center">
+                <img src="https://via.placeholder.com/150" alt="Donna Felkins-Dohm" class="w-full rounded-md shadow">
+                <h3 class="mt-2 text-lg font-medium text-gray-100">Donna Felkins-Dohm</h3>
+                <p class="text-gray-100">Medication Management, NP</p>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
+            <div class="text-center">
+                <img src="https://via.placeholder.com/150" alt="Melody Midoneck" class="w-full rounded-md shadow">
+                <h3 class="mt-2 text-lg font-medium text-gray-100">Melody Midoneck</h3>
+                <p class="text-gray-100">Psychotherapy, LCSW</p>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
+            <div class="text-center">
+                <img src="https://via.placeholder.com/150" alt="Kübra Aydin" class="w-full rounded-md shadow">
+                <h3 class="mt-2 text-lg font-medium text-gray-100">Kübra Aydin</h3>
+                <p class="text-gray-100">Psychotherapy, LMHC</p>
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
+            <div class="text-center">
+                <img src="https://via.placeholder.com/150" alt="Ellie Pinnock" class="w-full rounded-md shadow">
+                <h3 class="mt-2 text-lg font-medium text-gray-100">Ellie Pinnock</h3>
+                <p class="text-gray-100">Psychotherapy, LPC</p>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
+            <div class="text-center">
+                <img src="https://via.placeholder.com/150" alt="Ellie Pinnock" class="w-full rounded-md shadow">
+                <h3 class="mt-2 text-lg font-medium text-gray-100">Ellie Pinnock</h3>
+                <p class="text-gray-100">Psychotherapy, LPC</p>
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
+            <div class="text-center">
+                <img src="https://via.placeholder.com/150" alt="Ellie Pinnock" class="w-full rounded-md shadow">
+                <h3 class="mt-2 text-lg font-medium text-gray-100">Ellie Pinnock</h3>
+                <p class="text-gray-100">Psychotherapy, LPC</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Left Arrow -->
+    <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-200 focus:outline-none">
+        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+    </button>
+
+    <!-- Right Arrow -->
+    <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-200 focus:outline-none">
+        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+    </button>
+</div>
+
+
+<div class="relative w-full overflow-hidden py-8 px-10">
+    <div class="flex justify-between items-center mb-4">
+        <h2 class="text-2xl font-semibold text-white">Focus on Eating Disorders</h2>
+        <a href="#" class="text-gray-100 text-sm font-semibold hover:underline">Explore &rarr;</a>
+    </div>
+    <div id="slider2" class="flex transition-transform duration-500 ease-in-out">
+        <!-- Card 1 -->
+        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
+            <div class="text-center">
+                <img src="https://via.placeholder.com/150" alt="Ann Marie Buchanan-Cummings" class="w-full rounded-md shadow">
+                <h3 class="mt-2 text-lg font-medium text-gray-100">Ann Marie Buchanan-Cummings</h3>
+                <p class="text-gray-100">Medication Management, NP</p>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
+            <div class="text-center">
+                <img src="https://via.placeholder.com/150" alt="Jung Mi Yi" class="w-full rounded-md shadow">
+                <h3 class="mt-2 text-lg font-medium text-gray-100">Jung Mi Yi</h3>
+                <p class="text-gray-100">Psychotherapy, Licensed Psychologist</p>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
+            <div class="text-center">
+                <img src="https://via.placeholder.com/150" alt="Donna Felkins-Dohm" class="w-full rounded-md shadow">
+                <h3 class="mt-2 text-lg font-medium text-gray-100">Donna Felkins-Dohm</h3>
+                <p class="text-gray-100">Medication Management, NP</p>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
+            <div class="text-center">
+                <img src="https://via.placeholder.com/150" alt="Melody Midoneck" class="w-full rounded-md shadow">
+                <h3 class="mt-2 text-lg font-medium text-gray-100">Melody Midoneck</h3>
+                <p class="text-gray-100">Psychotherapy, LCSW</p>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
+            <div class="text-center">
+                <img src="https://via.placeholder.com/150" alt="Kübra Aydin" class="w-full rounded-md shadow">
+                <h3 class="mt-2 text-lg font-medium text-gray-100">Kübra Aydin</h3>
+                <p class="text-gray-100">Psychotherapy, LMHC</p>
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
+            <div class="text-center">
+                <img src="https://via.placeholder.com/150" alt="Ellie Pinnock" class="w-full rounded-md shadow">
+                <h3 class="mt-2 text-lg font-medium text-gray-100">Ellie Pinnock</h3>
+                <p class="text-gray-100">Psychotherapy, LPC</p>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
+            <div class="text-center">
+                <img src="https://via.placeholder.com/150" alt="Ellie Pinnock" class="w-full rounded-md shadow">
+                <h3 class="mt-2 text-lg font-medium text-gray-100">Ellie Pinnock</h3>
+                <p class="text-gray-100">Psychotherapy, LPC</p>
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="flex-shrink-0 w-full md:w-1/6 p-4">
+            <div class="text-center">
+                <img src="https://via.placeholder.com/150" alt="Ellie Pinnock" class="w-full rounded-md shadow">
+                <h3 class="mt-2 text-lg font-medium text-gray-100">Ellie Pinnock</h3>
+                <p class="text-gray-100">Psychotherapy, LPC</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Left Arrow -->
+    <button id="prev2" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-200 focus:outline-none">
+        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+    </button>
+
+    <!-- Right Arrow -->
+    <button id="next2" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-200 focus:outline-none">
+        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+    </button>
+</div>
+
+</div>
+</div>
+
+    <div class="bg-[#1e4d32] text-white py-16 px-10">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-9">
+            <div>
+
+                <h1 class="text-4xl font-semibold mb-4">How does Alma work?</h1>
+            </div>
+            <div>
+
+                <p class="mb-4">Alma is a community of independent mental health care providers. While our team helps you navigate the search process, we don’t prescribe the rest.</p>
+                <p class="mb-8">Each provider at Alma sets their own rates and makes their own decisions about going in-network with major insurance payers.</p>
+                <a href="#" class="inline-block bg-transparent border-2 border-white text-white py-2 px-4 rounded hover:bg-white hover:text-green-700 transition duration-300">
+                  Learn more about Alma
+                </a>
+            </div>
+        </div>
+      </div>
+      <footer class="bg-[#385444]  text-white py-16 px-14">
+        <div class=" mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold mb-4">About Alma</h3>
+              <ul>
+                <li><a href="#" class="hover:underline">Questions?</a></li>
+                <li><a href="#" class="hover:underline">FAQs</a></li>
+                <li><a href="mailto:info@helloalma.com" class="hover:underline">info@helloalma.com</a></li>
+                <li><a href="mailto:press@helloalma.com" class="hover:underline">press@helloalma.com</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-4">Get Started</h3>
+              <ul>
+                <li><a href="#" class="hover:underline">Find a therapist</a></li>
+                <li><a href="#" class="hover:underline">How It Works</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-4">For Providers</h3>
+              <ul>
+                <li><a href="#" class="hover:underline">Benefits</a></li>
+                <li><a href="#" class="hover:underline">Join Alma</a></li>
+                <li><a href="#" class="hover:underline">Insurance Program</a></li>
+                <li><a href="#" class="hover:underline">Resource Hub</a></li>
+                <li><a href="#" class="hover:underline">EHR Tools</a></li>
+                <li><a href="#" class="hover:underline">Refer a Provider</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-4">Information</h3>
+              <ul>
+                <li><a href="#" class="hover:underline">Our Mission</a></li>
+                <li><a href="#" class="hover:underline">DEI and Social Impact</a></li>
+                <li><a href="#" class="hover:underline">Where we are</a></li>
+                <li><a href="#" class="hover:underline">Careers</a></li>
+                <li><a href="#" class="hover:underline">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 flex justify-center lg:justify-start space-x-6">
+            <a href="#" aria-label="LinkedIn" class="text-white hover:text-gray-400">
+              <!-- LinkedIn SVG Icon -->
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.75 0-5 2.25-5 5v14c0 2.75 2.25 5 5 5h14c2.75 0 5-2.25 5-5v-14c0-2.75-2.25-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.5c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm13.5 11.5h-3v-5.5c0-1.656-3-1.523-3 0v5.5h-3v-10h3v1.318c1.396-2.586 6-2.777 6 2.481v6.201z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook" class="text-white hover:text-gray-400">
+              <!-- Facebook SVG Icon -->
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path d="M22 12c0-5.523-4.477-10-10-10s-10 4.477-10 10c0 4.99 3.657 9.128 8.438 9.878v-6.988h-2.539v-2.89h2.539v-2.197c0-2.507 1.492-3.891 3.773-3.891 1.094 0 2.238.195 2.238.195v2.461h-1.26c-1.242 0-1.629.771-1.629 1.561v1.871h2.773l-.443 2.89h-2.33v6.988c4.781-.75 8.438-4.888 8.438-9.878z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="text-white hover:text-gray-400">
+              <!-- Instagram SVG Icon -->
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path d="M12 0c-2.76 0-3.099.01-4.181.06-1.081.05-1.823.216-2.476.465-.672.257-1.238.597-1.798 1.158-.561.561-.901 1.126-1.158 1.798-.249.653-.415 1.395-.465 2.476-.05 1.082-.06 1.421-.06 4.181s.01 3.099.06 4.181c.05 1.081.216 1.823.465 2.476.257.672.597 1.238 1.158 1.798.561.561 1.126.901 1.798 1.158.653.249 1.395.415 2.476.465 1.082.05 1.421.06 4.181.06s3.099-.01 4.181-.06c1.081-.05 1.823-.216 2.476-.465.672-.257 1.238-.597 1.798-1.158.561-.561.901-1.126 1.158-1.798.249-.653.415-1.395.465-2.476.05-1.082.06-1.421.06-4.181s-.01-3.099-.06-4.181c-.05-1.081-.216-1.823-.465-2.476-.257-.672-.597-1.238-1.158-1.798-.561-.561-1.126-.901-1.798-1.158-.653-.249-1.395-.415-2.476-.465-1.082-.05-1.421-.06-4.181-.06zm0-2c2.837 0 3.182.011 4.29.062 1.107.051 1.87.236 2.528.507.684.284 1.29.665 1.896 1.271.606.606.987 1.212 1.271 1.896.271.658.456 1.421.507 2.528.051 1.108.062 1.453.062 4.29s-.011 3.182-.062 4.29c-.051 1.107-.236 1.87-.507 2.528-.284.684-.665 1.29-1.271 1.896-.606.606-1.212.987-1.896 1.271-.658.271-1.421.456-2.528.507-1.108.051-1.453.062-4.29.062s-3.182-.011-4.29-.062c-1.107-.051-1.87-.236-2.528-.507-.684-.284-1.29-.665-1.896-1.271-.606-.606-.987-1.212-1.271-1.896-.271-.658-.456-1.421-.507-2.528-.051-1.108-.062-1.453-.062-4.29s.011-3.182.062-4.29c.051-1.107.236-1.87.507-2.528.284-.684.665-1.29 1.271-1.896.606-.606 1.212-.987 1.896-1.271.658-.271 1.421-.456 2.528-.507 1.108-.051 1.453-.062 4.29-.062zm0 5.838c-3.41 0-6.162 2.752-6.162 6.162s2.752 6.162 6.162 6.162 6.162-2.752 6.162-6.162-2.752-6.162-6.162-6.162zm0 10.324c-2.296 0-4.162-1.866-4.162-4.162s1.866-4.162 4.162-4.162 4.162 1.866 4.162 4.162-1.866 4.162-4.162 4.162zm6.406-10.846c-.796 0-1.441-.646-1.441-1.441s.646-1.441 1.441-1.441 1.441.646 1.441 1.441-.646 1.441-1.441 1.441z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter" class="text-white hover:text-gray-400">
+              <!-- Twitter SVG Icon -->
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.723-.951.564-2.005.974-3.127 1.194-.897-.957-2.178-1.555-3.594-1.555-2.717 0-4.92 2.203-4.92 4.92 0 .386.043.762.127 1.124-4.09-.205-7.719-2.165-10.141-5.144-.424.727-.667 1.573-.667 2.475 0 1.708.87 3.215 2.19 4.099-.806-.026-1.566-.248-2.229-.616v.062c0 2.385 1.697 4.374 3.95 4.827-.413.112-.849.171-1.296.171-.318 0-.627-.031-.929-.088.631 1.972 2.464 3.404 4.634 3.443-1.699 1.332-3.839 2.127-6.16 2.127-.4 0-.79-.024-1.174-.069 2.198 1.409 4.809 2.23 7.615 2.23 9.139 0 14.137-7.573 14.137-14.137 0-.215-.005-.429-.015-.641.97-.701 1.805-1.577 2.47-2.575z"/>
+              </svg>
+            </a>
+          </div>
+          
+  
+          <div class="container mx-auto  py-8">
+              <h2 class="text-white text-2xl font-semibold mb-6">Find providers in your state</h2>
+              <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-white text-lg">
+                  <ul>
+                      <li>Alabama</li>
+                      <li>Alaska</li>
+                      <li>Arizona</li>
+                      <li>Arkansas</li>
+                      <li>California</li>
+                      <li>Colorado</li>
+                      <li>Connecticut</li>
+                      <li>Delaware</li>
+                      <li>Florida</li>
+                  </ul>
+                  <ul>
+                      <li>Georgia</li>
+                      <li>Hawaii</li>
+                      <li>Idaho</li>
+                      <li>Illinois</li>
+                      <li>Indiana</li>
+                      <li>Iowa</li>
+                      <li>Kansas</li>
+                      <li>Kentucky</li>
+                      <li>Louisiana</li>
+                  </ul>
+                  <ul>
+                      <li>Maine</li>
+                      <li>Maryland</li>
+                      <li>Massachusetts</li>
+                      <li>Michigan</li>
+                      <li>Minnesota</li>
+                      <li>Mississippi</li>
+                      <li>Missouri</li>
+                      <li>Montana</li>
+                      <li>Nebraska</li>
+                  </ul>
+                  <ul>
+                      <li>Nevada</li>
+                      <li>New Hampshire</li>
+                      <li>New Jersey</li>
+                      <li>New Mexico</li>
+                      <li>New York</li>
+                      <li>North Carolina</li>
+                      <li>North Dakota</li>
+                      <li>Ohio</li>
+                      <li>Oklahoma</li>
+                  </ul>
+                  <ul>
+                      <li>Oregon</li>
+                      <li>Pennsylvania</li>
+                      <li>Rhode Island</li>
+                      <li>South Carolina</li>
+                      <li>South Dakota</li>
+                      <li>Tennessee</li>
+                      <li>Texas</li>
+                      <li>Utah</li>
+                      <li>Vermont</li>
+                  </ul>
+                  <ul>
+                      <li>Virginia</li>
+                      <li>Washington</li>
+                      <li>Washington, D.C.</li>
+                      <li>West Virginia</li>
+                      <li>Wisconsin</li>
+                      <li>Wyoming</li>
+                  </ul>
+              </div>
+          </div>
+
+          <div class="container mx-auto px-4">
+            <h2 class="text-white text-2xl font-semibold mb-6">Find in-network care</h2>
+            <div>
+                <button id="toggle-button" class="flex justify-between items-center w-full text-white text-lg font-semibold focus:outline-none mb-4">
+                    Alma Insurance Partners
+                    <span id="toggle-icon" class="ml-2 transform rotate-180">&#9660;</span>
+                </button>
+                <div id="insurance-list" class="grid grid-cols-1 md:grid-cols-2 gap-4 text-white text-lg">
+                    <ul>
+                        <li>Aetna</li>
+                        <li>AllSavers UHC</li>
+                        <li>Allied Benefit Systems - Aetna</li>
+                        <li>Blue Cross Blue Shield of Massachusetts</li>
+                        <li>Christian Brothers Services - Aetna</li>
+                        <li>Cigna</li>
+                        <li>Empire Blue Cross Blue Shield</li>
+                        <li>Health Plans Inc.</li>
+                        <li>Health Scope - Aetna</li>
+                        <li>Meritain</li>
+                        <li>Nippon</li>
+                        <li>Oscar</li>
+                    </ul>
+                    <ul>
+                        <li>Oxford Health Plans</li>
+                        <li>Surest (Formerly Bind)</li>
+                        <li>Trustmark Health Benefits - Aetna</li>
+                        <li>Trustmark Health Benefits - Cigna</li>
+                        <li>Trustmark Small Business Benefits - Aetna</li>
+                        <li>Tufts Health Plan</li>
+                        <li>UHC Student Resources</li>
+                        <li>UMR</li>
+                        <li>United Healthcare Shared Services</li>
+                        <li>UnitedHealthcare</li>
+                        <li>UnitedHealthcare Global</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4">
+            <h2 class="text-white text-2xl font-semibold mb-6">Other Insurance</h2>
+            <div>
+                <button id="toggle-button-other" class="flex justify-between items-center w-full text-white text-lg font-semibold focus:outline-none mb-4">
+                    Other Insurance
+                    <span id="toggle-icon-other" class="ml-2 transform rotate-180">&#9660;</span>
+                </button>
+                <div id="other-insurance-list" class="grid grid-cols-1 md:grid-cols-2 gap-4 text-white text-lg">
+                    <ul>
+                        <li>1199</li>
+                        <li>Allways</li>
+                        <li>Anthem</li>
+                        <li>Anthem Blue Cross Blue Shield</li>
+                        <li>Beacon Health Options</li>
+                        <li>CT Medicaid</li>
+                        <li>Capital District Physicians’ Health Plan</li>
+                        <li>Emblem Health</li>
+                        <li>Fidelis</li>
+                        <li>Health New England</li>
+                        <li>Healthfirst</li>
+                        <li>Humana</li>
+                        <li>Husky</li>
+                    </ul>
+                    <ul>
+                        <li>Kingston Trust Fund</li>
+                        <li>Lucet</li>
+                        <li>MVP Health Care</li>
+                        <li>Magellan</li>
+                        <li>MagnaCare</li>
+                        <li>Medicare</li>
+                        <li>Multiplan</li>
+                        <li>NYSHIP</li>
+                        <li>Optimum</li>
+                        <li>POMCO</li>
+                        <li>Tricare East</li>
+                        <li>Wellfleet</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+         
+        <div class="bg-[#385444] text-white p-4">
+             <!-- Full-Width Divider -->
+             <div class="relative mt-4 lg:mt-6">
+                <div class="border-t border-white w-full"></div>
+                <div class="absolute inset-x-0 top-0 flex justify-center">
+                  <div class="bg-[#385444] px-2">
+                    <svg class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0l4 12-4 12-4-12z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            <div class="max-w-7xl mx-auto flex flex-col lg:flex-row py-12  items-center lg:items-start justify-between space-y-4 lg:space-y-0">
+              <!-- Crisis Information -->
+              <div class="text-sm text-center lg:text-left lg:w-1/2">
+                <p>
+                  If you or someone you know is experiencing an emergency or crisis and needs immediate help, call 911 or go to the nearest emergency room. Additional crisis resources can be found 
+                  <a href="#" class="text-green-300 underline">here</a>.
+                </p>
+              </div>
+          
+              <!-- Privacy Policy and Terms -->
+              <div class="text-sm text-center lg:text-right lg:w-1/2">
+                <p>
+                  <a href="#" class="text-green-300 hover:underline">Privacy Policy</a> • 
+                  <a href="#" class="text-green-300 hover:underline">Client Terms of Use</a> • 
+                  <a href="#" class="text-green-300 hover:underline">Digital Accessibility Statement</a> • 
+                  Copyright Alma, 2024
+                </p>
+              </div>
+            </div>
+          
+           
+          </div>
+          
+
+
+      </footer>
+      
+
+      <script>
+        let currentSlide = 0;
+    
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+            const offset = -currentSlide * 100 / slides.length;
+            document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
+        }
+    
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+    
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+    </script>
+    
+    
+
+    
+    <script>
+        const toggleButtonOther = document.getElementById('toggle-button-other');
+        const otherInsuranceList = document.getElementById('other-insurance-list');
+        const toggleIconOther = document.getElementById('toggle-icon-other');
+    
+        toggleButtonOther.addEventListener('click', () => {
+            otherInsuranceList.classList.toggle('hidden');
+            toggleIconOther.classList.toggle('rotate-180');
+        });
+    </script>
+    <script>
+        const slider = document.getElementById('slider');
+        const slider2 = document.getElementById('slider2');
+        const nextButton = document.getElementById('next');
+        const prevButton = document.getElementById('prev');
+        const nextButton2 = document.getElementById('next2');
+        const prevButton2 = document.getElementById('prev2');
+        const nextButton3 = document.getElementById('next3');
+        const prevButton3 = document.getElementById('prev3');
+        let scrollAmount = 0;
+        const updateCardWidth = () => {
+            const card = slider.children[0];
+            return card ? card.offsetWidth : 0;
+        };
+        let cardWidth = updateCardWidth();
+    
+        // Function to update the number of visible cards based on the screen width
+        const updateVisibleCards = () => {
+            const screenWidth = window.innerWidth;
+            if (screenWidth >= 1024) { // Large screens
+                return 6;
+            } else if (screenWidth >= 768) { // Medium screens
+                return 4;
+            } else { // Small screens
+                return 2;
+            }
+        };
+    
+        let visibleCards = updateVisibleCards();
+        let maxScroll = (slider.children.length - visibleCards) * cardWidth;
+    
+        window.addEventListener('resize', () => {
+            cardWidth = updateCardWidth();
+            visibleCards = updateVisibleCards();
+            maxScroll = (slider.children.length - visibleCards) * cardWidth;
+        });
+    
+        nextButton.onclick = function () {
+            if (scrollAmount < maxScroll) {
+                scrollAmount += cardWidth;
+                slider.style.transform = `translateX(-${scrollAmount}px)`;
+            }
+        };
+    
+        prevButton.onclick = function () {
+            if (scrollAmount > 0) {
+                scrollAmount -= cardWidth;
+                slider.style.transform = `translateX(-${scrollAmount}px)`;
+            }
+        };
+        nextButton2.onclick = function () {
+            if (scrollAmount < maxScroll) {
+                scrollAmount += cardWidth;
+                slider2.style.transform = `translateX(-${scrollAmount}px)`;
+            }
+        };
+    
+        prevButton2.onclick = function () {
+            if (scrollAmount > 0) {
+                scrollAmount -= cardWidth;
+                slider2.style.transform = `translateX(-${scrollAmount}px)`;
+            }
+        
+        }
+            nextButton3.onclick = function () {
+                if (scrollAmount < maxScroll) {
+                    scrollAmount += cardWidth;
+                    slider3.style.transform = `translateX(-${scrollAmount}px)`;
+                }
+            };
+        
+            prevButton3.onclick = function () {
+                if (scrollAmount > 0) {
+                    scrollAmount -= cardWidth;
+                    slider3.style.transform = `translateX(-${scrollAmount}px)`;
+                }
+        };
+    
+    
+        // Initial calculation
+        cardWidth = updateCardWidth();
+        maxScroll = (slider.children.length - visibleCards) * cardWidth;
+    </script>
+
+{% endblock content %}
