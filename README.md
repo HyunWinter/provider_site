@@ -1,4 +1,4 @@
-# Jupiter Site
+# Provider Site
 
 Django-based web application for a generic healthcare provider that we can reuse. Landing page, contact us, blog, etc.
 
