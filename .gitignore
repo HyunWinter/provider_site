@@ -1,0 +1,8 @@
+.idea
+__pycache__
+venv/
+/staticfiles
+/static
+db.sqlite3
+.DS_Store
+/scripts/dump.pg_dump
