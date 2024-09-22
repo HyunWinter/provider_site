@@ -2,10 +2,7 @@
 
 Django-based web application for a generic healthcare provider that we can reuse. Landing page, contact us, blog, etc.
 
-## Features
 
-- Search services by name.
-- Sort services by cash price (ascending or descending).
 
 ## Local Development Set-up
 
