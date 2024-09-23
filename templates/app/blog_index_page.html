@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load wagtailimages_tags %}
+
+
+{% block content %}
+  <div class="container">
+    <h1>{{ page.title }}</h1>
+    <h1>{{ page.title }}</h1>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.intro|safe }}</p>
+
+    <div class="row">
+      {% for post in posts %}
+        <div class="col-md-4">
+          <div class="card">
+            {% if post.main_image %}
+              {% image post.main_image fill-400x300 as rendition %}
+            {% endif %}
+            <div class="card-body">
+              <h5 class="card-title">{{ post.title }}</h5>
+              <p class="card-text">{{ post.intro }}</p>
+              <a href="{{ post.url }}" class="btn btn-primary">Read more</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

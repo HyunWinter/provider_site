@@ -26,52 +26,93 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'sayem-secret-key')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False 
+DEBUG = True 
 
 ALLOWED_HOSTS = ['*']
+SITE_ID = 1
 
 
-# Application definition
+PUPUT_AS_PLUGIN = True
 
 INSTALLED_APPS = [
+    # wagtail
+    'wagtail.contrib.forms',
+    'wagtail.contrib.redirects',
+    'wagtail.embeds',
+    'wagtail.sites',
+    'wagtail.users',
+    'wagtail.snippets',
+    'wagtail.documents',
+    'wagtail.images',
+    'wagtail.search',
+    'wagtail.admin',
+    'wagtail',
+    'modelcluster',
+    'taggit',
+    'wagtail.contrib.sitemaps',
+    'wagtail.contrib.routable_page',
+    'puput',
+
+    # Django core apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app.apps.AppConfig'
+    'django.contrib.sites',  # Required for Django CMS
+
+    # Your app
+    'app.apps.AppConfig',
 ]
 
+
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.security.SecurityMiddleware',  # Security middleware (first)
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # For serving static files efficiently
+    'django.contrib.sessions.middleware.SessionMiddleware',  # Sessions before authentication
+    'django.middleware.locale.LocaleMiddleware',  # Required for CMS
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    # Wagtail middleware
+    'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
+
+WAGTAIL_SITE_NAME = 'Riaz Blog'
+WAGTAILADMIN_BASE_URL = 'http://127.0.0.1:3005/'  # Replace with your actual site URL
+
+# If not already in your settings
+LANGUAGE_CODE = 'en-us'
+TIME_ZONE = 'UTC'
+USE_I18N = True
+USE_L10N = True
+USE_TZ = True
 
 ROOT_URLCONF = 'main.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['templates'],  # You can customize the template directories
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                # Default context processors
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',
+                'django.template.context_processors.request',  # Required by Django CMS
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                
+                'sekizai.context_processors.sekizai',  # For JS and CSS blocks management
             ],
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'main.wsgi.application'
 
@@ -122,10 +163,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "/static/"
-MEDIA_URL = "/media/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]  
-MEDIA_ROOT = BASE_DIR / 'media'
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 

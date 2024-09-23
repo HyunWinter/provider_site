@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container">
+    <h1>{{ page.title }}</h1>
+    <p><strong>{{ page.date }}</strong></p>
+    
+    {% if page.main_image %}
+      <img src="{{ page.main_image.get_rendition('fill-800x600').url }}" class="img-fluid" alt="{{ page.main_image.alt }}">
+    {% endif %}
+    
+    <p>{{ page.body|safe }}</p>
+  </div>
+{% endblock %}
